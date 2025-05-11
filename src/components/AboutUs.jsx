@@ -1,5 +1,5 @@
 
-function AboutUs() {
+export function AboutUs() {
   return (
     <div>
       <h1>About Us</h1>
@@ -7,4 +7,4 @@ function AboutUs() {
   )
 }
 
-export default AboutUs
+
