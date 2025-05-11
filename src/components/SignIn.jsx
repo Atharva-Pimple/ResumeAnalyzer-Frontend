@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useNavigate } from 'react-router-dom';
-import { addToken, loginUser } from '../Services/userServices';
+import { addToken, loginUser } from '../services/userServices';
 import { toast } from 'react-toastify';
 import { Formik } from 'formik';
 import { SignInSchema } from '../Schemas/SignInSchema';
