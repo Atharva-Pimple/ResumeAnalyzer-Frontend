@@ -14,7 +14,7 @@ function Navigationbar() {
   }
   return (
     <>
-      <Navbar bg="white" expand="lg" className="shadow-sm py-3">
+      <Navbar bg="white" expand="lg" className="shadow-sm py-3 fixed-top">
         <Container>
           <Navbar.Brand
             as={Link}

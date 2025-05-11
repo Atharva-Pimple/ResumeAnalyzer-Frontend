@@ -1,4 +1,18 @@
-.carousel-img {
-  max-height: 500px;
-  object-fit: cover;
+/* Hide both banners by default */
+.banner-lg, .banner-sm {
+  display: none;
+}
+
+/* Show small banner only on small screens (<768px) */
+@media (max-width: 767px) {
+  .banner-sm {
+    display: block;
+  }
+}
+
+/* Show large banner on medium (≥768px) and large screens */
+@media (min-width: 768px) {
+  .banner-lg {
+    display: block;
+  }
 }
