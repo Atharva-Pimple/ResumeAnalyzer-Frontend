@@ -14,3 +14,7 @@ export function getAnalysis(file) {
     },
   });
 }
+
+function hello(){
+  console.log("hello");
+}
