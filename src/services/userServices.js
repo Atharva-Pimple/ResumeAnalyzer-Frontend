@@ -49,3 +49,7 @@ export function getUser(){
 
 
 }
+
+export function hello(){
+    console.log("hello");
+}
