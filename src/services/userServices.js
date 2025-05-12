@@ -37,3 +37,11 @@ export function removeToken(){
 export function getToken(){
     return localStorage.getItem("token");
 }
+
+export function getUser(){
+    return axios.get(`http://localhost:3000/api/user/currUser`, {
+    headers: { "Authorization": `Bearer ${token}` }
+    });
+
+
+}
