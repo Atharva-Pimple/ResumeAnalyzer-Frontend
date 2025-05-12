@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
+
 export function UserProfile (){
 
     const navigate = useNavigate();
@@ -29,6 +30,7 @@ export function UserProfile (){
 
     useEffect(() =>{
         getUserData()
+
     },[])
 
     if (!user) {

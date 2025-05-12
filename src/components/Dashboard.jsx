@@ -12,6 +12,10 @@ function Dashboard() {
   const [analysis, setAnalysis] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
+  const [loading, setLoading] = useState(false);
+
+
+
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
@@ -28,6 +32,9 @@ function Dashboard() {
         return;
       }
 
+      setLoading(true);
+
+
       try {
         const response = await getAnalysis(values.file, token);
         if (response.status === 200) {
@@ -35,12 +42,28 @@ function Dashboard() {
         }
       } catch (error) {
         console.error(error);
+
+      }
+      finally{
+        setLoading(false);
+
       }
     },
   });
 
   return (
     <div style={{ textAlign: "center", paddingTop: "100px" }}>
+
+      {/* Loading spinner overlay */}
+      {loading && (
+        <div className="loading-overlay">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      )}
+
+
       {/* Banner images */}
       <img
         src="src/assets/BannerLg.png"
@@ -99,7 +122,11 @@ function Dashboard() {
                       )}
                     </Form.Group>
                     <div className="d-grid">
+
+                      <Button variant="primary" type="submit" disabled={loading} className={loading ? "clicked" : ""}>{loading ? "Analyzing..." : "Upload"}</Button>
+
                       <Button variant="primary" type="submit">Upload</Button>
+
                     </div>
                   </form>
                 </div>
