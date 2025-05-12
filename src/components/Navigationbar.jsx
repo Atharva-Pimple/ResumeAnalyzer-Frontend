@@ -7,7 +7,9 @@ import logo from "../assets/search.png";
 import { Link, useNavigate } from "react-router-dom";
 import { getToken, removeToken } from "../services/userServices"; 
 
+
 export function Navigationbar() {
+
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -47,7 +49,9 @@ export function Navigationbar() {
               <Nav.Link as={Link} to="/" className="px-3">Home</Nav.Link>
               <Nav.Link as={Link} to="/about" className="px-3">About Us</Nav.Link>
               <Nav.Link as={Link} to="/contact" className="px-3">Contact Us</Nav.Link>
+
               <Nav.Link as={Link} to="/profile" className="px-3">Profile </Nav.Link>
+
               <Button variant="primary" className="ms-3" onClick={handleAuthAction}>
                 {isLoggedIn ? "Logout" : "Sign In"}
               </Button>

@@ -13,8 +13,10 @@ export function fetchData(){
     });
 }
 
+
 export function deleteData(){
     return axios.delete(`http://localhost:3000/api/user/delete`, 
+
         {
             headers:{"Authorization" : `Bearer ${token}`}
         }
@@ -36,12 +38,14 @@ export function removeToken(){
 
 export function getToken(){
     return localStorage.getItem("token");
+
 }
 
 export function getUser(){
     return axios.get(`http://localhost:3000/api/user/currUser`, {
     headers: { "Authorization": `Bearer ${token}` }
     });
+
 
 
 }

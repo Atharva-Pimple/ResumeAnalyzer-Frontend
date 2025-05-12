@@ -30,7 +30,7 @@ export function UserProfile (){
 
     useEffect(() =>{
         getUserData()
-        
+
     },[])
 
     if (!user) {
