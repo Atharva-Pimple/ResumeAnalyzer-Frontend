@@ -125,7 +125,7 @@ function Dashboard() {
 
                       <Button variant="primary" type="submit" disabled={loading} className={loading ? "clicked" : ""}>{loading ? "Analyzing..." : "Upload"}</Button>
 
-                      <Button variant="primary" type="submit">Upload</Button>
+                      {/* <Button variant="primary" type="submit">Upload</Button> */}
 
                     </div>
                   </form>

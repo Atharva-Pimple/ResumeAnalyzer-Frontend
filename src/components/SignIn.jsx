@@ -23,7 +23,7 @@ export function SignIn() {
       if (response.status === 200) {
         addToken(response.data.token);
         toast.success("User logged in successfully");
-        navigate("/");
+        window.location.href = "/";
       } else {
         toast.error("User does not exist");
       }

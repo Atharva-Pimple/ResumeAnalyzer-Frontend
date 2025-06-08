@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { registerUser } from '../Services/userServices';
+import { registerUser } from "../services/userServices";
 import { toast } from 'react-toastify';
 
 import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik';
@@ -25,7 +25,7 @@ export function Register() {
       if (response.status === 201) {
         toast.success('User registered successfully');
         resetForm();
-        navigate('/');
+        navigate('/signin');
       } else {
         toast.error('Error');
       }
